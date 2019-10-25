@@ -1,0 +1,17 @@
+---
+title: "Project Proposal: Using Recent Year's NBA Advanced Statistics to Classify Player Types and Overall Impact"
+author: "Prathit Shukla, Michael Gagin"
+lab: Yangyi Lu Section 7
+date: "10/25/2019"
+output: pdf_document
+---
+
+The dataset we are planning to use is mined from the NBA reference on the website Basketball-reference, which has statistics for All NBA Players for the last 40+ years with few exceptions and bad data. For each player after 1979, there are over 30+ individual statistics availible with 25 of them helpful, numeric quantities including Points, Rebounds, Assists, to more advanced metrics such as Assists-Turnover Ratio, effective Field Goal Percentage, Win Shares per 48 minutes. Additionally this large dataset provides us with the player's Name, Age, Minutes, and Seasons Active, as auxiliary data. We may also want to extract new variables and use these instead such as Minutes per Game from Games Played and Total Minutes as we don't want to penalize a player for being injured. 
+
+At first, our analysis is going to be limited to one season as this will make our dataset small to the extent of 540 datapoints. However, if our initial attempt is successful for this, we want to expand the range of our problem and see how the NBA's definition of Guards, Forwards, and positions have changed over times in recent years. We can iterate over years of data with a master data set from the same website, Basketball-Reference, with over 10000 data points and select the ones for the years that we are looking for.
+
+Using selection techniques we want to narrow down the statistics first manually, such as remove similar data, or data that can be derived such as Assists Turnover Ratio or Shot percentages that can be derived from Taken and Made. We also want to remove insignificant predictors using either Best Subset Selection or Forward Stagewise selection to narrow down to a more reasonable amount of variables. 
+
+For our analysis, we are first going to normalize the data we are receiving by the minutes played per game, and get a new dataset with variables for the variables that can be normalized. We can start off with supervised learning techniques and use perhaps LDA,QDA, or Naive Bayes to see how well we can classify Player Position based on the distribution of statistics. 
+
+We are also looking forward to using K-means clustering to see how the algorithm will be able to divide into specific groups of players, maybe even more in depth than just the position but maybe play-style. From this we can just select the number of groups 
