@@ -1,6 +1,6 @@
 # NBA-Classification-Player-Impact
 
-This is repository that uses R to analyze NBA players impact based on certain statistics that we found were helpful
+This is repository that uses R to analyze NBA players impact based on certain statistics that we found were helpful.
 We used tree-based models, SVM, shrinkage, and KNN in R to rank NBA player’s
 annual output
 
